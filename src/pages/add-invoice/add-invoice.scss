@@ -1,0 +1,12 @@
+@import '../../styles/style-common.scss';
+
+.add-invoice {
+  height: $pageContentHeight;
+  .add-invoice-get-info {
+    button {
+      float: right;
+      margin-bottom: 20px;
+    }
+    margin-bottom: 20px;
+  }
+}

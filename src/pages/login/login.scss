@@ -1,0 +1,23 @@
+@import '../../styles/style-common.scss';
+
+.login {
+  height: $pageContentHeight;
+  margin: 0 auto;
+  .login-content {
+    justify-content: center;
+    .login__paper {
+      margin: auto;
+
+      .login__form {
+        width: 350px;
+      }
+    }
+  }
+  .forgot-password-link {
+    float: right;
+    font-size: 14px;
+    p {
+      margin-top: 0;
+    }
+  }
+}

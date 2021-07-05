@@ -1,0 +1,6 @@
+build/
+public/
+.nyc_output/
+coverage/
+node_modules/
+scripts/

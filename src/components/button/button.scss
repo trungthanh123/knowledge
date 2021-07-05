@@ -1,0 +1,18 @@
+@import '../../styles//style-common.scss';
+
+.button-custom {
+  button {
+    border-radius: 20px;
+    text-transform: unset;
+    font-weight: bold;
+  }
+  .button-primary {
+    color: $color--primary;
+    background-color: $color--tertiary;
+  }
+  .button-primary.MuiButton-contained.Mui-disabled {
+    color: $color--primary;
+    background-color: $color--tertiary;
+    opacity: 0.5;
+  }
+}

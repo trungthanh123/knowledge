@@ -1,0 +1,21 @@
+@import './styles//style-common.scss';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: $color--tertiary;
+}
+
+.app-content {
+  margin-top: $headerHeight;
+  margin-bottom: $footerHeight;
+  padding: 16px;
+}
+
+.error-text {
+  color: #f44336 !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}

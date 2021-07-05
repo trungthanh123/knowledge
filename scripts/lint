@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Copyright 2020 Hitachi Vantara Vietnam, Ltd.
+#
+
+cd "`dirname $0`/../src"
+# npm ci
+npm run lint

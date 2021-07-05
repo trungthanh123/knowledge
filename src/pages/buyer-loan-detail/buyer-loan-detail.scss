@@ -1,0 +1,10 @@
+@import '../../styles/style-common.scss';
+
+.buyer-loan-detail {
+  .loan-detail-commitment {
+    margin-right: 0;
+    .MuiCheckbox-root {
+      color: white;
+    }
+  }
+}

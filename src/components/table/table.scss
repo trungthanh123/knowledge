@@ -1,0 +1,45 @@
+@import '../../styles//style-common.scss';
+
+.table-custom {
+  background-color: $color--primary;
+  border-radius: 20px;
+  padding: 0 32px 10px 32px;
+  color: $color--tertiary;
+  .table-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px 0;
+    color: $color--tertiary;
+  }
+  .MuiPaper-rounded {
+    box-shadow: none;
+    color: $color--tertiary;
+    background-color: $color--primary;
+    th,
+    td {
+      background-color: $color--primary;
+      padding-left: 0;
+      color: $color--tertiary;
+    }
+    .MuiTableFooter-root {
+      color: $color--tertiary;
+      .MuiTableCell-root {
+        border-bottom: 0;
+        div[class^='MTablePaginationInner-root-'] {
+          color: $color--tertiary;
+          button {
+            color: $color--tertiary;
+          }
+        }
+      }
+    }
+    .MuiTableHead-root {
+      .MuiTableSortLabel-root:hover,
+      .MuiTableSortLabel-root:focus,
+      .MuiTableSortLabel-active,
+      .MuiTableSortLabel-icon {
+        color: white !important;
+      }
+    }
+  }
+}

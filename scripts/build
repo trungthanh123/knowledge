@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Copyright 2020 Hitachi Vantara Vietnam, Ltd.
+#
+
+docker build \
+  --build-arg REACT_APP_API_ENDPOINT=${REACT_APP_API_ENDPOINT} \
+  --cache-from $1:$2 "`dirname $0`/.." -t $1:$2

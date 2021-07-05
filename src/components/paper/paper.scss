@@ -1,0 +1,32 @@
+@import '../../styles//style-common.scss';
+
+.paper {
+  // max-width: 500px;
+
+  .MuiPaper-root {
+    background-color: $color--primary;
+    color: $color--tertiary;
+    border-radius: 15px;
+    .paper-title {
+      font-weight: bold;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+    .paper-content {
+      padding-bottom: 20px;
+      .paper-row-right {
+        padding: 10px;
+      }
+      .paper-row-left {
+        padding: 10px;
+        justify-content: flex-end;
+        font-weight: bold;
+      }
+    }
+    .paper-action {
+      justify-content: center;
+      padding: 20px 40px;
+    }
+  }
+}
