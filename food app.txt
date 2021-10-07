@@ -1,0 +1,212 @@
+import 'package:flutter/material.dart';
+import 'dart:math';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Flutter Demo',
+        initialRoute: '/',
+        routes: {
+          '/CategoryPage': (context) => CategoryPage(),
+          '/FoodsPage': (context) => FoodsPage(),
+        },
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          appBar: AppBar(centerTitle: false, title: const Text('Foods')),
+          body: CategoryPage(),
+        ));
+  }
+}
+
+// CATEGORY - model
+class Category {
+  final int? id;
+  final String? content;
+  final Color? color;
+
+  const Category({@required this.id, @required this.content, this.color});
+}
+
+const fakeCategory = [
+  Category(id: 1, content: 'Vietnamese Food', color: Colors.deepOrange),
+  Category(id: 2, content: 'Pizza', color: Colors.teal),
+  Category(id: 3, content: 'Hamburgers', color: Colors.pink),
+  Category(id: 4, content: 'Italy Food', color: Colors.green),
+  Category(id: 5, content: 'Pho', color: Colors.blueGrey),
+  Category(id: 6, content: 'Bun Bo', color: Colors.purpleAccent),
+];
+
+class CategoryPage extends StatelessWidget {
+  static const String routeName = '/CategoryPage';
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView(
+        padding: const EdgeInsets.all(12),
+        children:
+            fakeCategory.map((item) => CategoryItem(category: item)).toList(),
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 300, // max width
+            childAspectRatio: 3 / 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10));
+  }
+}
+
+class CategoryItem extends StatelessWidget {
+  Category? category;
+
+  CategoryItem({this.category});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+//         Navigator.of(context).push((
+//           MaterialPageRoute(
+//           builder: (context) => FoodsPage(category: category))
+//         ));
+        Navigator.pushNamed(context, FoodsPage.routeName,
+            arguments: {'category': category});
+      },
+      splashColor: Colors.deepPurple,
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(category?.content ?? "",
+                style: const TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold))
+          ],
+        ),
+        decoration: BoxDecoration(
+            color: category?.color, borderRadius: BorderRadius.circular(15)),
+      ), // Container child
+    ); // Container parrent
+  }
+}
+
+class FoodsPage extends StatelessWidget {
+  static const String routeName = '/FoodsPage';
+  Category? category;
+
+  FoodsPage({this.category});
+
+  @override
+  Widget build(BuildContext context) {
+    Map<dynamic, dynamic> arguments =
+        ModalRoute.of(context)!.settings.arguments as Map;
+    category = arguments['category'];
+    List<Food> foods =
+        fakeFoods.where((food) => food.categoryId == category?.id).toList();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(category?.content ?? ""),
+      ),
+      body: Center(
+        child: ListView.builder(
+          itemCount: foods.length,
+          itemBuilder: (context, index) {
+            Food food = foods[index];
+            return Stack(children: <Widget>[
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.amber,
+                    margin: const EdgeInsets.all(50.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text(food.name)],
+                    ),
+                    height: 150,
+                  ), // Container stack 1,
+                ), // Expanded
+              ]), // Row
+              Positioned(
+                  top: 60,
+                  left: 60,
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                    
+                    decoration: BoxDecoration(
+                      color: Colors.black45,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white, width: 2),
+                    ),
+                    child: Row(children: [
+                      const Icon(Icons.timer),
+                      Text('${food.duration.inMinutes} minutes'),
+                    ]), // Row
+                  )), // Positioned Stack 2
+            ]); // Stack
+          },
+        ), // ListView
+      ), // Center
+    );
+  }
+}
+
+// Food Model
+class Food {
+  int id = 0;
+  String name = '';
+  String urlName = '';
+  Duration duration = const Duration(seconds: 0);
+  Complexity? complexity = Complexity.simple;
+  List<String>? ingredients = [];
+  int categoryId = 0;
+
+  Food({
+    required this.name,
+    required this.urlName,
+    required this.duration,
+    this.complexity,
+    this.ingredients,
+    required this.categoryId,
+  }) {
+    id = Random().nextInt(100);
+  }
+}
+
+enum Complexity { simple, medium, hard }
+
+var fakeFoods = [
+  Food(
+      name: 'sushi',
+      urlName: 'https://picsum.photos/200',
+      duration: const Duration(minutes: 6),
+      complexity: Complexity.medium,
+      ingredients: ['toi', 'ot', 'nuoc mam'],
+      categoryId: 1),
+  Food(
+      name: 'sushi 2',
+      urlName: 'https://picsum.photos/200',
+      duration: const Duration(minutes: 10),
+      complexity: Complexity.medium,
+      ingredients: ['rau', 'toi', 'ot', 'nuoc mam'],
+      categoryId: 1),
+  Food(
+      name: 'com tam',
+      urlName: 'https://picsum.photos/200',
+      duration: const Duration(minutes: 0),
+      ingredients: ['gao', 'ot', 'nuoc mam'],
+      categoryId: 2),
+  Food(
+      name: 'bun bo',
+      urlName: 'https://picsum.photos/200',
+      duration: const Duration(minutes: 0),
+      complexity: Complexity.medium,
+      ingredients: ['beef', 'ot', 'nuoc mam'],
+      categoryId: 3),
+];
