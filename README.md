@@ -32,6 +32,12 @@ BUG: There is a problem here.
 
 TODO: No problem, but addtional code needs to be written, usually when you are skipping something.
 
-# Authen: là 1 tiến trình xác thực và định danh
-# Author: là 1 tiến trình xác thực những gì bạn được phép làm
-# Sử dụng useContext cho component bố cục, link: https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fjavascript.plainenglish.io%2Fcomponent-composition-in-react-a476c532a6fd 
+# Authen & Author: 
+Authen: 1 tiến trình xác thực và định danh
+Author: 1 tiến trình xác thực những gì bạn được phép làm
+
+# Sử dụng useContext cho component bố cục:
+Link: https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fjavascript.plainenglish.io%2Fcomponent-composition-in-react-a476c532a6fd
+
+# UseRef
+Dùng để lưu các giá trị qua một tham chiếu bên ngoài (lưu trữ giá trị mà không làm render component)
