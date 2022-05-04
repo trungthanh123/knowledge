@@ -34,6 +34,7 @@ TODO: No problem, but addtional code needs to be written, usually when you are s
 
 # Authen & Author: 
 Authen: 1 tiến trình xác thực và định danh
+
 Author: 1 tiến trình xác thực những gì bạn được phép làm
 
 # Sử dụng useContext cho component bố cục:
