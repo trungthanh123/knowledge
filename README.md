@@ -42,3 +42,6 @@ Link: https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fjavascript.
 
 # UseRef
 Dùng để lưu các giá trị qua một tham chiếu bên ngoài (lưu trữ giá trị mà không làm render component)
+
+# Hoisting
+Di chuyển khai báo lên đầu phạm vi hiện tại (áp dụng cho khai báo biến và khai báo hàm - declare function)
