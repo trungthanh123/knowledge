@@ -57,3 +57,7 @@ Chuyển tiếp ref từ component cha sang một trong những element của co
 
 # Hoisting
 Di chuyển khai báo lên đầu phạm vi hiện tại (áp dụng cho khai báo biến và khai báo hàm - declare function)
+
+# Null & undefined
+Null là giá trị rõ ràng được gán cho biến hoặc trả về từ function
+Undefined là giá trị mặc định cho biến không được khai báo hoặc hàm không return bất cứ gì hoặc object không tồn tại
