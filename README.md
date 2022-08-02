@@ -17,7 +17,7 @@
 
 \* \* \* \* \* \* \* \* \* { background-color: rgba(0,0,255,.2); }
 
-# JS: replace method with $&, $`, $'
+# JS: replace method with "$&", "$`", "$'"
 
 # Comment like a pro
 NOTE: Description of how the code works (when it isn't self evident).
@@ -61,3 +61,9 @@ Di chuyển khai báo lên đầu phạm vi hiện tại (áp dụng cho khai b�
 # Null & undefined
 - Null là giá trị rõ ràng được gán cho biến hoặc trả về từ function
 - Undefined là giá trị mặc định cho biến không được khai báo hoặc hàm không return bất cứ gì hoặc object không tồn tại
+
+# Closure
+Là 1 hàm nằm bên trong hàm khác và closure có thể sử dụng biến toàn cục, biến cục bộ của hàm cha ngày cả khi hàm cha đã đóng (thực thi xong), và biến cục bộ của chính nó
+Ứng dụng: 
+  - Function Factory: là hàm tạo ra một hàm khác
+
