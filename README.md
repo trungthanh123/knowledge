@@ -53,3 +53,10 @@ Là 1 hàm nằm bên trong hàm khác và closure có thể sử dụng biến 
 Ứng dụng: 
   - Function Factory: là hàm tạo ra một hàm khác
 
+## Changing the last commit message
+```sh
+git commit --amend -m "fix: image name correct message."
+```
+```sh
+git push --force-with-lease origin your-branch
+```
