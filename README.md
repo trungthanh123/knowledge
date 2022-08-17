@@ -66,10 +66,10 @@ git push --force-with-lease origin your-branch
 	- giá trị khởi tạo là undefined => có thể gọi trước khi định nghĩa
 	
 *const + let là 
-	block scope
-	không có giá trị khởi tạo => không thể gọi trước khi định nghĩa
-		const: không định nghĩa lại, không update lại giá trị
-		let: không định nghĩa lại, được update lại giá trị
+	- block scope
+	- không có giá trị khởi tạo => không thể gọi trước khi định nghĩa
+		- const: không định nghĩa lại, không update lại giá trị
+		- let: không định nghĩa lại, được update lại giá trị
 
 *function scope: khi một biến được khai báo bên trong một hàm, nó chỉ có thể truy cập được bên trong hàm đó, bên ngoài hàm không truy cập được
 
