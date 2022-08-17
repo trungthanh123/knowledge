@@ -60,17 +60,19 @@ git commit --amend -m "fix: image name correct message."
 ```sh
 git push --force-with-lease origin your-branch
 ```
-
-*var là function scope (global scope): 
+## need title
+### var là function scope (global scope): 
 	- có thể định nghĩa lại (ví dụ var a = 0; ... var b = 1; => dễ lỗi => dùng let/const), có thể update lại giá trị
 	- giá trị khởi tạo là undefined => có thể gọi trước khi định nghĩa
 	
-*const + let là 
+### const + let là 
 	- block scope
 	- không có giá trị khởi tạo => không thể gọi trước khi định nghĩa
 		- const: không định nghĩa lại, không update lại giá trị
 		- let: không định nghĩa lại, được update lại giá trị
 
-*function scope: khi một biến được khai báo bên trong một hàm, nó chỉ có thể truy cập được bên trong hàm đó, bên ngoài hàm không truy cập được
+### function scope: 
+khi một biến được khai báo bên trong một hàm, nó chỉ có thể truy cập được bên trong hàm đó, bên ngoài hàm không truy cập được
 
-*block scope: một biến khi được khai báo bên trong một lệnh if/switch hoặc vòng lặp, chúng chỉ có thể truy cập được trọng if/switch hoặc vòng lặp đó
+### block scope: 
+một biến khi được khai báo bên trong một lệnh if/switch hoặc vòng lặp, chúng chỉ có thể truy cập được trọng if/switch hoặc vòng lặp đó
