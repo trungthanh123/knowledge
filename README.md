@@ -1,7 +1,8 @@
 ## JS: replace method with "$&", "$`", "$'"
 
-## DOM
+## Real DOM
 Là cấu trúc và nội dung của một trang web
+Mọi sự thay đổi liên quan đến update DOM, sẽ phải reload lại trang web để DOM repaint => SPA => Vitural DOM
 
 ## Comment like a pro
 NOTE: Description of how the code works (when it isn't self evident).
