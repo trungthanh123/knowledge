@@ -1,5 +1,7 @@
 ## JS: replace method with "$&", "$`", "$'"
 
+## DOM: là cấu trúc và nội dung của một trang web
+
 ## Comment like a pro
 NOTE: Description of how the code works (when it isn't self evident).
 
@@ -60,7 +62,7 @@ git commit --amend -m "fix: image name correct message."
 ```sh
 git push --force-with-lease origin your-branch
 ```
-## need title
+## Variables & Scope
 ### var là function scope (global scope): 
 	- có thể định nghĩa lại (ví dụ var a = 0; ... var b = 1; => dễ lỗi => dùng let/const), có thể update lại giá trị
 	- giá trị khởi tạo là undefined => có thể gọi trước khi định nghĩa
