@@ -29,11 +29,11 @@ Link: https://medium.com/m/global-identity?redirectUrl=https%3A%2F%2Fjavascript.
 Dùng để lưu các giá trị qua một tham chiếu bên ngoài (lưu trữ giá trị mà không làm render component)
 
 ## UseCallback
-- giữ/bảo tồn một hàm không được **tạo lại** nếu dependencies không thay đổi
+- giữ/bảo tồn một hàm không được **tạo lại** nếu dependencies không thay đổi (mỗi lần render)
 - dùng khi truyền 1 hàm vào component con, ...
 
 ## UseMemo
-- Giữ/bảo tồn một giá trị không **thực thi lại** nếu dependencies không thay đổi
+- Giữ/bảo tồn một giá trị không **thực thi hoặc tính toán lại** nếu dependencies không thay đổi (mỗi lần render)
 - dùng khi cần ngăn chặn việc thực thi một hàm tốn nhiều thời gian và tài nguyên
 
 ## React.memo
