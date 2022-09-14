@@ -33,7 +33,7 @@ Dùng để lưu các giá trị qua một tham chiếu bên ngoài (lưu trữ 
 - dùng khi truyền 1 hàm vào component con, ...
 
 ## UseMemo
-- Giữ/bảo tồn một hàm không **thực thi lại** nếu dependencies không thay đổi
+- Giữ/bảo tồn một giá trị không **thực thi lại** nếu dependencies không thay đổi
 - dùng khi cần ngăn chặn việc thực thi một hàm tốn nhiều thời gian và tài nguyên
 
 ## React.memo
