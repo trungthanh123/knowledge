@@ -1,6 +1,7 @@
 ## JS: replace method with "$&", "$`", "$'"
 
-## DOM: là cấu trúc và nội dung của một trang web
+## DOM
+Là cấu trúc và nội dung của một trang web
 
 ## Comment like a pro
 NOTE: Description of how the code works (when it isn't self evident).
@@ -78,3 +79,6 @@ khi một biến được khai báo bên trong một hàm, nó chỉ có thể t
 
 ### block scope: 
 một biến khi được khai báo bên trong một lệnh if/switch hoặc vòng lặp, chúng chỉ có thể truy cập được trọng if/switch hoặc vòng lặp đó
+
+## React hook
+Là các function cho phép kết nối React stage và lifecycle trong funtion component
