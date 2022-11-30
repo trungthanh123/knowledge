@@ -83,3 +83,6 @@ một biến khi được khai báo bên trong một lệnh if/switch hoặc vò
 
 ## React hook
 Là các function cho phép kết nối React stage và lifecycle trong funtion component
+
+## Arrow function
+là 1 biểu thức hàm rút gọn
