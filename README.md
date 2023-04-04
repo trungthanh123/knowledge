@@ -122,3 +122,9 @@ const colours = {
     }
 };
 ```
+## Closures
+Closure là một hàm được khai báo bên trong một hàm khác và có thể truy cập vào các biến được khai báo bên ngoài hàm cha. Khi một hàm trả về một hàm khác, nó tạo ra một closure để lưu trữ tất cả các biến và giá trị của nó, cho đến khi hàm bên trong được thực thi.
+Ứng dụng:
++ creating private variables and functions
++ implementing callbacks
++ handling asynchronous code
