@@ -46,7 +46,7 @@ Giống react.memo nhưng dùng cho class component
 Chuyển tiếp ref từ component cha sang một trong những element của component con
 
 ## Hoisting
-Di chuyển khai báo lên đầu phạm vi hiện tại (áp dụng cho khai báo biến và khai báo hàm - declare function)
+Di chuyển khai báo lên đầu global scope (áp dụng cho khai báo biến và khai báo hàm - declare function)
 
 ## Null & undefined
 - Null là giá trị rõ ràng được gán cho biến hoặc trả về từ function
