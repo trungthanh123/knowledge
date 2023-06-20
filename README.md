@@ -1,5 +1,8 @@
 ## JS: replace method with "$&", "$`", "$'"
+## DOM
+is an acronym that stands for Document Object Model. It is an interface that allows computer programs to access and update the content, structure, and style of a document, such as an HTML file.
 
+The DOM allows web developers to interact with the elements and components of their websites using programming languages like JavaScript.
 ## Real DOM
 Là cấu trúc và nội dung của một trang web
 Mọi sự thay đổi liên quan đến update DOM, sẽ phải reload lại trang web để DOM repaint => SPA => Vitural DOM
