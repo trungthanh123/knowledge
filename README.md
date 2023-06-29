@@ -131,3 +131,6 @@ Closure là một hàm được khai báo bên trong một hàm khác và có th
 + creating private variables and functions
 + implementing callbacks
 + handling asynchronous code
+## debounce & throttle
+Debounce: ngăn chặn action thực thi liên tục trong một khoảng thời gian (vd: search funtion)
+Throttle: delay thực hiện 1 function sau một khoảng thời gian (vd: auto save của Word)
