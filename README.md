@@ -55,13 +55,6 @@ Di chuyển khai báo lên đầu phạm vi hiện tại (áp dụng cho khai b�
 - Null là giá trị rõ ràng được gán cho biến hoặc trả về từ function
 - Undefined là giá trị mặc định cho biến không được khai báo hoặc hàm không return bất cứ gì hoặc object không tồn tại
 
-## Closure
-Là 1 hàm nằm bên trong hàm khác và closure có thể sử dụng biến toàn cục, biến cục bộ của hàm cha ngày cả khi hàm cha đã đóng (thực thi xong), và biến cục bộ của chính nó
-Ứng dụng: 
-  - Function Factory: là hàm tạo ra một hàm khác
-  - tạo private variables
-  - là kết quả return của HOF và có thể truy xuất các biến bên trong HOF đó
-
 ## Changing the last commit message
 ```sh
 git commit --amend -m "fix: image name correct message."
@@ -85,6 +78,9 @@ khi một biến được khai báo bên trong một hàm, nó chỉ có thể t
 
 ### block scope: 
 một biến khi được khai báo bên trong một lệnh if/switch hoặc vòng lặp, chúng chỉ có thể truy cập được trọng if/switch hoặc vòng lặp đó
+
+### lexical scope (phạm vi biến Lexical)
+trong một nhóm các hàm lồng nhau, các hàm bên trong có quyền truy cập vào các biến và các tài nguyên khác trong phạm vi hàm cha của chúng. Lexical scope đôi khi còn được gọi là Static scope
 
 ## React hook
 Là các function cho phép kết nối React stage và lifecycle trong funtion component
@@ -128,14 +124,17 @@ const colours = {
 };
 ```
 ## Closures
-Closure là một hàm được khai báo bên trong một hàm khác và có thể truy cập vào các biến được khai báo bên ngoài hàm cha. Khi một hàm trả về một hàm khác, nó tạo ra một closure để lưu trữ tất cả các biến và giá trị của nó, cho đến khi hàm bên trong được thực thi.
+Closure là một hàm được khai báo bên trong một hàm khác và có thể truy cập vào các biến được khai báo bên ngoài hàm cha. Khi một hàm trả về một hàm khác, nó tạo ra một closure để lưu trữ tất cả các biến và giá trị của nó, cho đến khi hàm bên trong được thực thi. (là kết quả return của HOF và có thể truy xuất các biến bên trong HOF đó)
 Ứng dụng:
 + creating private variables and functions
 + implementing callbacks
 + handling asynchronous code
++ function factory: là hàm tạo ra một hàm khác
+  
 ## debounce & throttle
 Debounce: ngăn chặn action thực thi liên tục trong một khoảng thời gian (vd: search funtion)
 
 Throttle: delay thực hiện 1 function sau một khoảng thời gian (vd: auto save của Word)
+
 ## Curry function
 Là nhiều hàm có 1 tham số
