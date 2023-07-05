@@ -59,6 +59,8 @@ Di chuyển khai báo lên đầu phạm vi hiện tại (áp dụng cho khai b�
 Là 1 hàm nằm bên trong hàm khác và closure có thể sử dụng biến toàn cục, biến cục bộ của hàm cha ngày cả khi hàm cha đã đóng (thực thi xong), và biến cục bộ của chính nó
 Ứng dụng: 
   - Function Factory: là hàm tạo ra một hàm khác
+  - tạo private variables
+  - là kết quả return của HOF và có thể truy xuất các biến bên trong HOF đó
 
 ## Changing the last commit message
 ```sh
@@ -135,3 +137,5 @@ Closure là một hàm được khai báo bên trong một hàm khác và có th
 Debounce: ngăn chặn action thực thi liên tục trong một khoảng thời gian (vd: search funtion)
 
 Throttle: delay thực hiện 1 function sau một khoảng thời gian (vd: auto save của Word)
+## Curry function
+Là nhiều hàm có 1 tham số
