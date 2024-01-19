@@ -41,6 +41,7 @@ Dùng để lưu các giá trị qua một tham chiếu bên ngoài (lưu trữ 
 
 ## React.memo
 Là 1 HOC dùng cho function component, giảm số lần re-render không cần thiết
+shallow comparison các props để quyết định việc render 
   
 ## PureComponent
 Giống react.memo nhưng dùng cho class component
