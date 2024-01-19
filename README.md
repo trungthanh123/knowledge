@@ -134,7 +134,7 @@ Closure là một hàm được khai báo bên trong một hàm khác và có th
 ## debounce & throttle
 Debounce: ngăn chặn action thực thi liên tục trong một khoảng thời gian (vd: search funtion)
 
-Throttle: delay thực hiện 1 function sau một khoảng thời gian (vd: auto save của Word)
+Throttle: delay thực hiện 1 function sau một khoảng thời gian, hạn chế function call liên tục (vd: auto save của Word)
 
 ## Curry function
 Là nhiều hàm có 1 tham số
